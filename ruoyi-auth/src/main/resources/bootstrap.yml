@@ -1,10 +1,18 @@
 # Tomcat
 server: 
   port: 9200
-
+  servlet:
+    context-path: /auth
 # Spring
 spring: 
   application:
+  datasource:
+    username: root
+    password: mz462913
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://candy1874.xyz:3306/ruoyi?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+  redis:
+    host: candy1874.xyz
     # 应用名称
     name: ruoyi-auth
   profiles:

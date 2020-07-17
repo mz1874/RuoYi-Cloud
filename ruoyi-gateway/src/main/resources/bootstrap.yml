@@ -3,7 +3,9 @@ server:
   port: 8080
 
 # Spring
-spring: 
+spring:
+  redis:
+    host: candy1874.xyz
   application:
     # 应用名称
     name: ruoyi-gateway

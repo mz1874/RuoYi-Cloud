@@ -3,6 +3,8 @@ package com.ruoyi.system.service.impl;
 import java.util.Collection;
 import java.util.List;
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ruoyi.common.core.constant.Constants;
@@ -22,7 +24,7 @@ import com.ruoyi.system.service.ISysConfigService;
 @Service
 public class SysConfigServiceImpl implements ISysConfigService
 {
-    @Autowired
+    @Resource
     private SysConfigMapper configMapper;
 
     @Autowired
@@ -31,7 +33,7 @@ public class SysConfigServiceImpl implements ISysConfigService
     /**
      * 项目启动时，初始化参数到缓存
      */
-    @PostConstruct
+//    @PostConstruct
     public void init()
     {
         List<SysConfig> configsList = configMapper.selectConfigList(new SysConfig());
